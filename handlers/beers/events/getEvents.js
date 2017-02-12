@@ -5,7 +5,7 @@
 
 require('dotenv').config();
 const axios = require('axios');
-const {beerEndPoint, beersEndPoint, key} = require('../endpoint');
+const {beerEndPoint, beersEndPoint, key} = require('../../endpoint');
 
 module.exports.getEvents = (event, context, callback) => {
 
