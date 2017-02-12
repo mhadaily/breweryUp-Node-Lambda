@@ -1,11 +1,9 @@
 'use strict';
 require('dotenv').config();
 const axios = require('axios');
+const {beerEndPoint, beersEndPoint, key} = require('../endpoint');
 
 module.exports.getBeers = (event, context, callback) => {
-
-  const beersEndPoint = 'http://api.brewerydb.com/v2/beers';
-  const key = process.env.API_KEY;
 
   axios.get(`${beersEndPoint}`, {
         params: {
