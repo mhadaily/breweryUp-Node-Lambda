@@ -33,6 +33,46 @@ functions:
             parameteres:
               paths:
                 id: true
+  getBreweries:
+    handler: handlers/beers/breweries/getBreweries.getBreweries
+    events:
+      - http:
+          method: GET
+          path: beers/{id}/breweries
+          integration: lambda
+          cors: true
+          request:
+            parameteres:
+              paths:
+                id: true
+
+  getBrewery:
+    handler: handlers/beers/breweries/getBrewery.getBrewery
+    events:
+      - http:
+          method: GET
+          path: beers/{id}/breweries/{brid}
+          integration: lambda
+          cors: true
+          request:
+            parameteres:
+              paths:
+                id: true
+                brewery_id: true
+
+  getAwardEvents:
+    handler: handlers/beers/events/getEvents.getAwardEvents
+    events:
+      - http:
+          method: GET
+          path: beers/{id}/events
+          integration: lambda
+          cors: true
+          request:
+            parameteres:
+              paths:
+                id: true
+
   getAll:
     handler: handlers/beers/getBeers.getBeers
     events:
