@@ -73,6 +73,19 @@ functions:
               paths:
                 id: true
 
+  getIngredients:
+    handler: handlers/beers/ingredients/getIngredients.getIngredients
+    events:
+      - http:
+          method: GET
+          path: beers/{id}/ingredients
+          integration: lambda
+          cors: true
+          request:
+            parameteres:
+              paths:
+                id: true
+
   getAll:
     handler: handlers/beers/getBeers.getBeers
     events:
