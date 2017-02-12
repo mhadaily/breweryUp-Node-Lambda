@@ -1,0 +1,43 @@
+service: serverless-brewerydb-for-breweryup-app
+frameworkVersion: ">=1.1.0 < 2.0.0"
+
+provider:
+  name: aws
+  runtime: nodejs4.3
+  stage: v2
+  cfLogs: true
+  region: us-west-1
+  iamRoleStatements:
+    - Effect: "Allow"
+      Action:
+        - "s3:*"
+        - "cloudwatch:*"
+      Resource: "*"
+
+package:
+  individually: true
+
+plugins:
+  - serverless-plugin-optimize
+
+functions:
+  getOne:
+    handler: handlers/beers/getBeer.getBeer
+    events:
+      - http:
+          method: GET
+          path: beers/{id}
+          integration: lambda
+          cors: true
+          request:
+            parameteres:
+              paths:
+                id: true
+  getAll:
+    handler: handlers/beers/getBeers.getBeers
+    events:
+      - http:
+          method: GET
+          path: beers
+          integration: lambda
+          cors: true
