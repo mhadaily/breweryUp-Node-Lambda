@@ -1,13 +1,13 @@
 /*
  GET: /beer/:beerId/events
- Gets a listing of all events that a beer is at or has won awards at.
+ Gets a listing of all events that brew the specific beer.
  */
 
 require('dotenv').config();
 const axios = require('axios');
-const {beerEndPoint, beersEndPoint, key} = require('../../endpoint');
+const {beerEndPoint, beersEndPoint, key} = require('../endpoint');
 
-module.exports.getAwardEvents = (event, context, callback) => {
+module.exports.getEvents = (event, context, callback) => {
 
   const beerID = event.path.id;
 
