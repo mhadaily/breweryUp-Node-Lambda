@@ -61,7 +61,7 @@ functions:
                 brewery_id: true
 
   getAwardEvents:
-    handler: handlers/beers/events/getEvents.getAwardEvents
+    handler: handlers/beers/events/getEvents.getEvents
     events:
       - http:
           method: GET
