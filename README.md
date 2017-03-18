@@ -2,6 +2,8 @@
 
 I have build this very simple server to be used on my application [here](https://github.com/mhadaily/breweryUp-Ember)
 
+A new tutorial is coming out soon. Please Stay tuned... 
+
 ### Stack
 
 1- Serverless

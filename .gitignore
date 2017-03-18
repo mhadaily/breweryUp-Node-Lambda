@@ -24,4 +24,4 @@ typings/
 *.tgz
 .yarn-integrity
 .env
-.serverless/
+.serverless
