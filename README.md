@@ -1,22 +1,20 @@
-##Serverless BreweryDB
+# Serverless BreweryDB, AWS Lambda, API Gateway
 
 I have build this very simple server to be used on my application [here](https://github.com/mhadaily/breweryUp-Ember)
 
-A new tutorial is coming out soon. Please Stay tuned... 
-
 ### Stack
 
-1- Serverless
-2- AWS Lambda 
-3- AWS API-Gateway
-4- Node.js
+* 1- Serverless
+* 2- AWS Lambda 
+* 3- AWS API-Gateway
+* 4- Node.js
 
-###Deploy 
+### Deploy 
 
 as easy as run `sls deploy`
 
-###Installation
+### Installation
 
-1- install serverless `npm install -g serverless`
-2- use Serverless documentation for more infor. 
+* install serverless `npm install -g serverless`
+* use Serverless documentation for more info. 
 
